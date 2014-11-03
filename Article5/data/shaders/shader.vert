@@ -15,6 +15,6 @@ void main()
     vec3 vLightPos = vec3(-2.0, 2.0, 0.0);
     vec3 vLightColor = vec3(1.0, 1.0, 1.0);
     vec3 outputColor=vec3(0.5f,0.5f,0.5f);
-	outputColor+=clamp(dot(normalize(inNormal),normalize(vLightPos-inPosition) ), 0, 1)*vLightColor*0.5;
+	outputColor+=clamp(dot(inNormal,normalize(vLightPos-inPosition)), 0, 1)*vLightColor;
     theColor = outputColor;
 }
